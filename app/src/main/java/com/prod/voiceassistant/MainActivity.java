@@ -25,11 +25,22 @@ public class MainActivity extends AppCompatActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              savedInstanceState.clear();
-                // qusdaedsfstionField
-                //asdsasddsasd
+              //savedInstanceState.clear();
+              onClickSendButton();
+
             }
         });
+
+    }
+
+    protected void onClickSendButton(){
+
+        String text = questionField.getText().toString();
+        String answer = "Ок, понял";
+
+        chatWindow.append(">> "+ text + "\n");
+        chatWindow.append("<< "+ AI.getAnswer(text) + "\n");
+        questionField.setText("");
 
     }
 }
