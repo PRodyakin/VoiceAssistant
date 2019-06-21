@@ -46,11 +46,11 @@ public class MessageListAdapter extends RecyclerView.Adapter {
         if(i == USER_TYPE){
 
 
-            view = layoutInflater.inflate(R.layout.user_message, viewGroup);
+            view = layoutInflater.inflate(R.layout.user_message, viewGroup, false);
 
         }else{
 
-            view = layoutInflater.inflate(R.layout.assistant_message, viewGroup);
+            view = layoutInflater.inflate(R.layout.assistant_message, viewGroup, false);
         }
         return new MessageViewHolder(view);
     }
